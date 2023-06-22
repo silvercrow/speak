@@ -1,0 +1,11 @@
+version: "3.7"
+
+services:
+  go:
+    image: "silvercrow-speak:0.0.1"
+    build: .
+    ports:
+      - "8080:8080"
+    environment:
+      - say=${say}
+      - voiceId=${voiceId}

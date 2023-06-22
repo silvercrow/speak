@@ -32,10 +32,9 @@ go run speak.go -say="こんにちわ"
 ```
 .
 └── tmp
-    └── audio
-        └── さよなら.mp3
+      └── さよなら.mp3
 
-cd tmp/audio/
+cd audio/
 
 ```
 
@@ -51,9 +50,8 @@ go run speak.go -say="bonjour je m'appelle Celine" -voiceId Celine
 ```
 .
 └── tmp
-    └── audio
-        └── bonjour je m'appelle Celine.mp3
+      └── bonjour je m'appelle Celine.mp3
 
-cd tmp/audio/
+cd audio/
 
 ```

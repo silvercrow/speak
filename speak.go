@@ -31,7 +31,7 @@ func savePollyVoice(text string, folderName string, fileName string, voiceId str
 	output, err := svc.SynthesizeSpeech(input)
 
 	// Save as MP3
-	mp3File := "tmp/" + folderName + "/" + fileName + ".mp3"
+	mp3File := folderName + "/" + fileName + ".mp3"
 
 	outFile, err := os.Create(mp3File)
 	if err != nil {
@@ -47,7 +47,7 @@ func savePollyVoice(text string, folderName string, fileName string, voiceId str
 		fmt.Print(err.Error())
 		os.Exit(1)
 	}
-	fmt.Println("✅ --> temp/" + folderName + "/" + fileName + ".mp3")
+	fmt.Println("✅ -->" + folderName + "/" + fileName + ".mp3")
 }
 
 var say string
@@ -62,10 +62,8 @@ func main() {
 	flag.Parse()
 	fmt.Println("Converting text into audio for: [ " + say + "]  with voiceId: ["+ voiceId +"] to be saved into folder ["+ audioFolderName +"] inside tmp folder.")
 
-	//create tmp folder
-	os.Mkdir("tmp", os.ModePerm)
 	//create voice folder
-	os.Mkdir("tmp/"+audioFolderName, os.ModePerm)
+	os.Mkdir(audioFolderName, os.ModePerm)
 	//create audio file
 	savePollyVoice(say, audioFolderName, say, voiceId)
 
