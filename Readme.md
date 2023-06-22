@@ -17,7 +17,13 @@ You need AWS CLI on your computer and access to polly by default Im running poll
 ## 🚀 Run
 
 ```
-go run speak.go --say こんにちわ
+go run speak.go -say こんにちわ
+
+```
+or
+
+```
+go run speak.go -say="こんにちわ"
 
 ```
 
@@ -25,10 +31,29 @@ go run speak.go --say こんにちわ
 
 ```
 .
-├── audio
-│   └── こんにちわ.mp3
+└── tmp
+    └── audio
+        └── さよなら.mp3
 
+cd tmp/audio/
 
-cd audio/
+```
+
+## 🚀 Run with other languages
+check [https://docs.aws.amazon.com/polly/latest/dg/voicelist.html](https://docs.aws.amazon.com/polly/latest/dg/voicelist.html) for more voiceIds
+
+```
+go run speak.go -say="bonjour je m'appelle Celine" -voiceId Celine
+
+```
+## 🏁 check the result inside the audio folder
+
+```
+.
+└── tmp
+    └── audio
+        └── bonjour je m'appelle Celine.mp3
+
+cd tmp/audio/
 
 ```
