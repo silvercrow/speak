@@ -1,7 +1,7 @@
 
 # Speak
 
-Go lang console japanese text to amazon polly speech audio
+Go lang console text to amazon polly speech audio
 
 ## Install AWS CLI
 You need AWS CLI on your computer and access to polly by default Im running polly in us-east-1
@@ -15,6 +15,7 @@ You need AWS CLI on your computer and access to polly by default Im running poll
 
 
 ## 🚀 Run
+By default im using the voiceId Takumi to translate to japanese but it can be changed to other languages keep reading to learn how
 
 ```
 go run speak.go -say こんにちわ
