@@ -20,7 +20,14 @@ func savePollyVoice(text string, fileName string) {
 	}
 	svc := polly.New(sess)
 
-	input := &polly.SynthesizeSpeechInput{OutputFormat: aws.String("mp3"), Text: aws.String(text), VoiceId: aws.String("Takumi")}
+	txt := "<speak>"+text+".<break time=\"1s\"/></speak>"
+
+	input := &polly.SynthesizeSpeechInput{
+		OutputFormat: aws.String("mp3"), // Specify the desired output format
+		Text:         aws.String(txt),  // Set the SSML text
+		TextType:     aws.String("ssml"), // Set the text type as SSML
+		VoiceId:      aws.String("Takumi"), // Replace with your desired voice
+	}
 
 	output, err := svc.SynthesizeSpeech(input)
 
