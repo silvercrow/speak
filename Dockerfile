@@ -8,7 +8,7 @@ RUN go mod download
 COPY *.go ./
 
 ARG say=hello
-ARG voiceId=Arthur
+ARG voiceId=Brian
 
 
 RUN CGO_ENABLED=0 GOOS=linux go build -o /speak
