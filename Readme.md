@@ -56,3 +56,4 @@ go run speak.go -say="bonjour je m'appelle Celine" -voiceId Celine
 cd audio/
 
 ```
+[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://bmc.link/tquickbrownfox)
